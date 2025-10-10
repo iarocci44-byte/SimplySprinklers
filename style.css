@@ -116,6 +116,16 @@ p {
     opacity: 1;
 }
 
+/* Footer styles */
+.container.footer {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+    color: rgb(38, 93, 165);
+    border-top: 2px solid rgb(38, 93, 165);
+}
+
 /* Responsive: stack on small screens */
 @media (max-width: 720px) {
     .container.welcome {
