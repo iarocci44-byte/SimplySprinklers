@@ -96,9 +96,9 @@ p {
 .rotator {
     position: relative;
     width: 100%;
-    max-width: 500px;
+    max-height: 350px;
     aspect-ratio: 4 / 3;
-    overflow: hidden;
+    overflow: clip;
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(133, 212, 138);
     background: linear-gradient(180deg, #f7fbfc 0%, #e9f3f7 100%);
@@ -124,6 +124,12 @@ p {
     text-align: center;
     color: rgb(38, 93, 165);
     border-top: 2px solid rgb(38, 93, 165);
+}
+
+.footer__logo {
+    height: 150px;
+    width: auto;
+    margin-bottom: 10px;
 }
 
 /* Responsive: stack on small screens */
