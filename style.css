@@ -5,6 +5,10 @@ body {
     background-color:rgb(242, 248, 250)
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 ul {
     display:flex;
     padding: 0;
@@ -22,7 +26,7 @@ h1 {
 }
 
 .green {
-    color: rgb(56, 128, 4);
+    color: rgb(24, 170, 24);
 }
 
 p {
@@ -90,6 +94,72 @@ a {
     flex: 1 1 50%;
     max-width: 500px;
 }
+.welcome__left--social-media {
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 2px 2px;
+}
+
+.social__media--content {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 24px;
+    color: rgb(38, 93, 165);
+    position: relative;
+    padding: 10px 10px;   
+}
+.social__media--content.yelp:hover::after {
+    content: 'Yelp';
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: -1;
+    font-size: 14px;
+    display: inline-block;
+    transform: all 200ms ease;
+}
+.social__media--content.instagram:hover::after {
+    content: 'Instagram';
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: -1;
+    font-size: 14px;
+    display: inline-block;
+    transform: all 200ms ease;
+}
+
+.social__media:hover, .fa-brands:hover {
+    transform: scale(.90);
+    transition: all 200ms ease;
+}
+
+.social__media:active, .fa-brands:active {
+    transform: scale(1.1);
+    transition: all 200ms ease;
+}
+
+.social__media {
+    height: 24px;
+    width: auto;
+    filter: hue-rotate(200deg);
+}
+
+.social__media--content {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 75px;
+    height: auto;
+}
+
 .welcome__right {
     flex: 0 0 50%;
     display: flex;
