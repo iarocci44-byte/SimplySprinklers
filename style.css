@@ -26,7 +26,7 @@ h1 {
 }
 
 .green {
-    color: rgb(24, 170, 24);
+    color: rgb(73, 184, 78);
 }
 
 p {
@@ -78,7 +78,7 @@ a {
 .nav__link:hover {
   cursor: pointer;
   transition: all 200ms ease;
-  border-bottom: 3px solid rgb(133, 212, 138);
+  border-bottom: 3px solid rgb(73, 184, 78);
 }
 
 /* Welcome section layout */
@@ -175,7 +175,7 @@ a {
     aspect-ratio: 4 / 3;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 6px 18px rgba(133, 212, 138);
+    box-shadow: 0 6px 18px rgba(73, 184, 78);
     background: linear-gradient(180deg, #f7fbfc 0%, #e9f3f7 100%);
     transition: transform 300ms ease;
 }
@@ -334,7 +334,7 @@ a {
     top: 5px;
     width: 8px;
     height: 8px;
-    background: rgb(133, 212, 138); /* green accent */
+    background: rgb(73, 184, 78); /* green accent */
     border-radius: 50%;
 }
 
