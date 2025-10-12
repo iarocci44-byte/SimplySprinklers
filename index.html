@@ -23,7 +23,7 @@
             <ul>
                 <li><a href="#" class="nav__link">Home</a></li>
                 <li><a href="#" class="nav__link">About us</a></li>
-                <li><a href="#" class="nav__link">Services</a></li>
+                <li><a href="#" id="nav-services" class="nav__link">Services</a></li>
                 <li><a href="mailto:simplysprinklers@gmail.com?subject=Inquiry from website" target="_blank" class="nav__link"><i class="fa-regular fa-envelope"></i></a></li>
             </ul>
             </div>
@@ -58,5 +58,23 @@
         <p>&copy; 2025 Simply Sprinklers. All rights reserved.</p>
     </div>
 </section>
+<!-- Services modal/backdrop -->
+<div class="modal-backdrop" id="modal-backdrop" aria-hidden="true"></div>
+<aside class="modal modal--left" id="services-modal" role="dialog" aria-modal="true" aria-labelledby="services-title" aria-hidden="true">
+    <header class="modal__header">
+        <h2 id="services-title">Our Services</h2>
+        <button class="modal__close" id="services-close" aria-label="Close services panel">✕</button>
+    </header>
+    <div class="modal__body">
+        <ul class="services-list">
+            <li>Sprinkler Installation</li>
+            <li>System Repair & Maintenance</li>
+            <li>Backflow Prevention and Testing</li>
+            <li>Trenching & Irrigation Design</li>
+            <li>Seasonal Startup & Winterization</li>
+            <li>Smart Controller Setup</li>
+        </ul>
+    </div>
+</aside>
 </body>
 </html>
