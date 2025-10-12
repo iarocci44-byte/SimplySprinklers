@@ -22,7 +22,7 @@
             <div class="nav__links">
             <ul>
                 <li><a href="#" class="nav__link">Home</a></li>
-                <li><a href="#" class="nav__link">About us</a></li>
+                <li><a href="#" id="nav-about" class="nav__link">About us</a></li>
                 <li><a href="#" id="nav-services" class="nav__link">Services</a></li>
                 <li><a href="mailto:simplysprinklers@gmail.com?subject=Inquiry from website" target="_blank" class="nav__link"><i class="fa-regular fa-envelope"></i></a></li>
             </ul>
@@ -56,6 +56,7 @@
             <img class="footer__logo" src="./assets/logo-w-contact.png" alt="Simply Sprinklers Logo" class="footer__logo">    
         </figure>    
         <p>&copy; 2025 Simply Sprinklers. All rights reserved.</p>
+        <p class="credit">Site design by <a href="http://christopheriarocci.me" target="_blank" class="nav__link">Christopher Iarocci</a>.</p>
     </div>
 </section>
 <!-- Services modal/backdrop -->
@@ -74,6 +75,22 @@
             <li>Seasonal Startup & Winterization</li>
             <li>Smart Controller Setup</li>
         </ul>
+    </div>
+</aside>
+<!-- About modal/backdrop (uses same backdrop) -->
+<aside class="modal modal--left" id="about-modal" role="dialog" aria-modal="true" aria-labelledby="about-title" aria-hidden="true">
+    <header class="modal__header">
+        <h2 id="about-title">Contact & Location</h2>
+        <button class="modal__close" id="about-close" aria-label="Close contact panel">✕</button>
+    </header>
+    <div class="modal__body">
+        <address>
+            <p>Simply Sprinklers Long Island, Inc.</p>
+            <p>1745 Merrick Ave Suite 3A<br>Merrick, NY 11566</p>
+            <p>Please call or email us for a free estimate.</p>
+            <p>Phone: <a href="tel:+15169980788" class="nav__link">(516) 998-0788</a></p>
+            <p><a href="mailto:simplysprinklers@gmail.com?subject=Inquiry from website" target="_blank" class="nav__link"><i class="fa-regular fa-envelope"></i></a></p>
+        </address>
     </div>
 </aside>
 </body>

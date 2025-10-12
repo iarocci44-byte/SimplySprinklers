@@ -34,6 +34,11 @@ p {
     text-decoration: underline;
 }
 
+a {
+    color: rgb(38, 93, 165);
+    text-decoration: none;
+}
+
 /* Navigation Bar */
 .container__nav {
     background-color: rgb(242, 248, 250);
@@ -137,6 +142,11 @@ p {
     height: 150px;
     width: auto;
     margin-bottom: 10px;
+}
+
+.credit {
+    font-size: 14px;
+    color: rgb(38, 93, 165);
 }
 
 /* Responsive: stack on small screens */

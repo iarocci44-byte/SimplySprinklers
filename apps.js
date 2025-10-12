@@ -49,42 +49,58 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('services-modal');
   const backdrop = document.getElementById('modal-backdrop');
   const closeBtn = document.getElementById('services-close');
+  const aboutLink = document.getElementById('nav-about');
+  const aboutModal = document.getElementById('about-modal');
+  const aboutClose = document.getElementById('about-close');
 
-  function openModal() {
-    if (!modal || !backdrop) return;
-    modal.classList.add('open');
+  // generic open/close for any modal element (panelEl should be the aside element)
+  function openModal(panelEl, focusTarget) {
+    if (!panelEl || !backdrop) return;
+    panelEl.classList.add('open');
     backdrop.classList.add('show');
-    modal.setAttribute('aria-hidden', 'false');
+    panelEl.setAttribute('aria-hidden', 'false');
     backdrop.setAttribute('aria-hidden', 'false');
-    // focus the close button for keyboard users
-    if (closeBtn) closeBtn.focus();
+    if (focusTarget) focusTarget.focus();
   }
 
-  function closeModal() {
-    if (!modal || !backdrop) return;
-    modal.classList.remove('open');
+  function closeModal(panelEl, returnFocusTo) {
+    // if panelEl omitted, close any open panel
+    const panel = panelEl || document.querySelector('.modal.open');
+    if (!panel || !backdrop) return;
+    panel.classList.remove('open');
     backdrop.classList.remove('show');
-    modal.setAttribute('aria-hidden', 'true');
+    panel.setAttribute('aria-hidden', 'true');
     backdrop.setAttribute('aria-hidden', 'true');
-    // return focus to services link
-    if (servicesLink) servicesLink.focus();
+    if (returnFocusTo) returnFocusTo.focus();
   }
 
   if (servicesLink) {
     servicesLink.addEventListener('click', (e) => {
       e.preventDefault();
-      openModal();
+      openModal(modal, closeBtn);
     });
   }
 
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-  if (backdrop) backdrop.addEventListener('click', closeModal);
+  if (closeBtn) closeBtn.addEventListener('click', () => closeModal(modal, servicesLink));
+  if (aboutLink) {
+    aboutLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal(aboutModal, aboutClose);
+    });
+  }
+  if (aboutClose) aboutClose.addEventListener('click', () => closeModal(aboutModal, aboutLink));
+  if (backdrop) backdrop.addEventListener('click', () => closeModal());
 
-  // Escape key closes modal
+  // Escape key closes any open modal
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      // only close if modal is open
-      if (modal && modal.classList.contains('open')) closeModal();
+      const openPanel = document.querySelector('.modal.open');
+      if (openPanel) {
+        // determine return focus target: services or about link
+        if (openPanel.id === 'services-modal') closeModal(openPanel, servicesLink);
+        else if (openPanel.id === 'about-modal') closeModal(openPanel, aboutLink);
+        else closeModal(openPanel);
+      }
     }
   });
 });
