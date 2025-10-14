@@ -252,6 +252,10 @@ a {
         margin-bottom: 8px;
 
     }
+    .nav__logo--container .nav__logo{
+        height: 60px;
+        width: auto;
+    }
 }
 
 /* Modal (left sliding panel) */
