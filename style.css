@@ -137,12 +137,12 @@ a {
 }
 
 .social__media:hover, .fa-brands:hover {
-    transform: scale(.90);
+    transform: scale(1.1);
     transition: all 200ms ease;
 }
 
 .social__media:active, .fa-brands:active {
-    transform: scale(1.1);
+    transform: scale(.9);
     transition: all 200ms ease;
 }
 
