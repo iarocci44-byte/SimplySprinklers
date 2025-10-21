@@ -23,6 +23,11 @@ h1, h2, h3, h4, h5, h6, p {
 h1 {
     font-size: 36px;
     margin-bottom: 10px;
+    margin-top: 10px;
+}
+h2 {
+    font-size: 28px;
+    margin: 0;
 }
 
 .green {
@@ -67,7 +72,7 @@ a {
 }
 
 .nav__links {
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .nav__logo--container .nav__logo{
@@ -84,7 +89,7 @@ a {
 /* Welcome section layout */
 .container.welcome {
     max-width: 1200px;
-    margin: 30px auto;
+    margin: 0 auto;
     display: flex;
     gap: 20px;
     align-items: center;
@@ -93,6 +98,20 @@ a {
 .welcome__left {
     flex: 1 1 50%;
     max-width: 500px;
+}
+.free__estimate--container {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    text-align: center;
+    padding-bottom: 10px;
+    max-height: 44px;
+}
+.free__estimate:hover {
+    cursor: pointer;
+    transition: all 200ms ease;
+    border-bottom: 3px solid rgb(73, 184, 78);
+    margin-bottom: -3px;
 }
 .welcome__left--social-media {
     display: flex;

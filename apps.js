@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const aboutLink = document.getElementById('nav-about');
   const aboutModal = document.getElementById('about-modal');
   const aboutClose = document.getElementById('about-close');
+  const freeEstimate = document.getElementById('free-estimate');
 
   // generic open/close for any modal element (panelEl should be the aside element)
   function openModal(panelEl, focusTarget) {
@@ -84,6 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (closeBtn) closeBtn.addEventListener('click', () => closeModal(modal, servicesLink));
   if (aboutLink) {
     aboutLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal(aboutModal, aboutClose);
+    });
+  }
+  if (freeEstimate) {
+    freeEstimate.addEventListener('click', (e) => {
       e.preventDefault();
       openModal(aboutModal, aboutClose);
     });
