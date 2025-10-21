@@ -52,13 +52,11 @@ a {
 .container__nav {
     background-color: rgb(242, 248, 250);
     color: white;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
     border-bottom: 2px solid rgb(38, 93, 165);
 }
 
