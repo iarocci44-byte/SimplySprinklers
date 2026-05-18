@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banner Admin | Simply Sprinklers Long Island</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="login-page">
+    <main class="login-main">
+      <section class="login-card" aria-labelledby="banner-admin-title">
+        <h1 id="banner-admin-title">Banner Editor</h1>
+        <p>Update the two Banner lines stored in Firestore.</p>
+
+        <form id="banner-form" class="login-form">
+          <label for="banner-line-1-input">Banner Line 1</label>
+          <input
+            id="banner-line-1-input"
+            name="bannerLine1"
+            type="text"
+            required
+            placeholder="Enter banner line 1"
+          />
+
+          <label for="banner-line-2-input">Banner Line 2</label>
+          <input
+            id="banner-line-2-input"
+            name="bannerLine2"
+            type="text"
+            required
+            placeholder="Enter banner line 2"
+          />
+
+          <button id="banner-save-btn" type="submit">Save Banner</button>
+          <p id="banner-status" class="login-status" aria-live="polite"></p>
+        </form>
+
+        <div class="homepage-editor__actions">
+          <button id="banner-logout-btn" type="button">Log Out</button>
+          <a class="login-back-link" href="index.html">Back to homepage</a>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="banner-admin.js"></script>
+  </body>
+</html>

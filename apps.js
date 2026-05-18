@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const images = Array.from(rotator.querySelectorAll('.rotator__img'));
   let current = 0;
-  const intervalMs = 3500;
+  const intervalMs = 3000;
   let timer = null;
 
   function show(index) {
@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const aboutModal = document.getElementById('about-modal');
   const aboutClose = document.getElementById('about-close');
   const freeEstimate = document.getElementById('free-estimate');
+  const promoContact = document.getElementById('promo-contact');
 
   // generic open/close for any modal element (panelEl should be the aside element)
   function openModal(panelEl, focusTarget) {
@@ -95,6 +96,12 @@ document.addEventListener('DOMContentLoaded', () => {
       openModal(aboutModal, aboutClose);
     });
   }
+  if (promoContact) {
+    promoContact.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal(aboutModal, aboutClose);
+    });
+  }
   if (aboutClose) aboutClose.addEventListener('click', () => closeModal(aboutModal, aboutLink));
   if (backdrop) backdrop.addEventListener('click', () => closeModal());
 
@@ -110,4 +117,39 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+  // --- Promo Banner logic ---
+  const promoBanner = document.querySelector('.promo-banner');
+  const promoClose = document.querySelector('.promo-banner__close');
+
+  if (promoClose && promoBanner) {
+    promoClose.addEventListener('click', () => {
+      promoBanner.classList.add('hidden');
+    });
+  }
 });
+
+const openVideoBtn = document.getElementById('openVideo');
+const videoOverlay = document.getElementById('videoOverlay');
+const closeVideoBtn = document.getElementById('closeVideo');
+const youtubeVideo = document.getElementById('youtubeVideo');
+
+if (openVideoBtn && videoOverlay && closeVideoBtn && youtubeVideo) {
+  const originalVideoSrc = youtubeVideo.src;
+  const autoplaySeparator = originalVideoSrc.includes('?') ? '&' : '?';
+
+  openVideoBtn.addEventListener('click', () => {
+    videoOverlay.style.display = 'flex';
+    youtubeVideo.src = `${originalVideoSrc}${autoplaySeparator}autoplay=1`;
+  });
+
+  const closePopup = () => {
+    videoOverlay.style.display = 'none';
+    youtubeVideo.src = originalVideoSrc;
+  };
+
+  closeVideoBtn.addEventListener('click', closePopup);
+  window.addEventListener('click', (event) => {
+    if (event.target === videoOverlay) closePopup();
+  });
+}
