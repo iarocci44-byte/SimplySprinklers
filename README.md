@@ -1,1 +1,1 @@
-This is a website I designed based on the customer's needs and wants.  It is a brochure site with a small backend that allows the customer to update the specials banner whenever needed.  I used Javscript, CSS and Firebase to accomplish this.
+This is a website I designed based on the customer's needs and wants.  It is a brochure site with a small backend that allows the customer to update the specials banner whenever needed.  I used Javscript, CSS and Firebase to accomplish this.  Live site at https://www.simplysprinklersli.com
